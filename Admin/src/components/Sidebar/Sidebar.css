@@ -1,0 +1,57 @@
+.sidebar{
+    width:25%;
+    min-height: 100vh;
+    border: 1px solid rgb(0, 0, 0);
+    border-top: 0;
+    
+}
+
+.sidebar-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 5%;
+    padding-top: 50px;
+    gap: 25px;
+}
+.sidebar-options{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: aliceblue;
+    background-color: rgba(0,0,0,0.7);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: grabbing; 
+}
+
+
+.sidebar-options:hover {
+    background-color: red;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full-width sidebar on smaller screens */
+        min-height: auto; /* Adjust height */
+        border-right: none; /* Remove border for a clean look */
+        box-shadow: none; /* Simplify design for smaller screens */
+    }
+    .sidebar-options {
+        padding: 8px 10px; /* Compact padding */
+        font-size: 0.9rem; /* Smaller font */
+    }
+    .sidebar-options:hover {
+        transform: none; /* Remove hover movement for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-options {
+        flex-direction: column; /* Stack icon and text vertically */
+        gap: 8px; /* Adjust spacing */
+        text-align: center; /* Center-align content */
+    }
+}

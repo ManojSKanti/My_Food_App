@@ -1,0 +1,133 @@
+.add-component {
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+  
+  .add form {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+  }
+  
+  .add-img-upload,
+  .add-product-name,
+  .add-product-description,
+  .add-category-price,
+  .add-price {
+    flex: 1; 
+    min-width: 200px; 
+  }
+  
+  
+  .add-img-upload {
+    max-width: 200px;
+  }
+  
+  .add-img-upload img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #000000;
+  }
+  
+  .add-product-name select,
+  .add-product-description textarea,
+  .add-category-price select,
+  .add-price input {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0,0,0,0.7);
+    color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .add-category-price {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .add-btn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px; /* Add margin to create space above the button */
+}
+  
+  .add-btn:hover {
+    background-color: red;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .add form {
+      gap: 15px; /* Reduce spacing */
+      justify-content: center; /* Center-align form fields */
+    }
+  
+    .add-img-upload,
+    .add-product-name,
+    .add-product-description,
+    .add-category-price,
+    .add-price {
+      flex: 1 1 calc(50% - 20px); /* Two columns layout */
+      min-width: 150px; /* Reduce minimum width */
+    }
+  
+    .add-btn {
+      width: 90px; /* Slightly smaller button */
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .add form {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center-align content */
+      gap: 15px; /* Adjust spacing */
+    }
+  
+    .add-img-upload,
+    .add-product-name,
+    .add-product-description,
+    .add-category-price,
+    .add-price {
+      flex: 1 1 100%; /* Full-width for mobile */
+      max-width: 100%; /* Limit to container width */
+    }
+  
+    .add-btn {
+      width: 80px; /* Further reduce button size */
+      font-size: 13px; /* Adjust font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .add-component {
+      margin: 10px; /* Compact margins for smaller screens */
+      padding: 5px; /* Compact padding */
+    }
+  
+    .add form {
+      gap: 10px; /* Reduce gap further */
+    }
+  
+    .add-img-upload img {
+      max-width: 150px; /* Reduce image size for small screens */
+    }
+  
+    .add-btn {
+      width: 75px; /* Smaller button */
+      font-size: 12px; /* Smaller font size */
+      padding: 8px; /* Compact padding */
+    }
+  }
